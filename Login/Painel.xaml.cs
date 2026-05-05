@@ -6,6 +6,8 @@ namespace Login;
 
 public partial class Painel : Window
 {
+    private int tempoMaximo = 30;
+    
     public Painel()
     {
         InitializeComponent();
@@ -15,7 +17,7 @@ public partial class Painel : Window
     private void BotaoBuscarImagem(object sender, RoutedEventArgs e)
     {
         string nomeEstudante = tbEstudanteNome.Text;
-         
+
         // Estrutura Switch-case
         switch (nomeEstudante.ToLower())
         {
@@ -76,5 +78,23 @@ public partial class Painel : Window
         imagemBitmap.UriSource = new Uri(url);
         imagemBitmap.EndInit();
         return imagemBitmap;
+    }
+
+    private async void GerenciarContagemRegressiva()
+    {
+        int contador = 0;
+        while (contador < tempoMaximo)
+        {
+            await Task.Delay(1000);
+            contador++;
+            Displaytemporizador.Text = $"contagem regressiva: {tempoMaximo - contador}s";
+        }
+        this.Close();
+    }
+
+
+    private void QuamdoJanelaAbrir(object sender, RoutedEventArgs e)
+    {
+        GerenciarContagemRegressiva();
     }
 }

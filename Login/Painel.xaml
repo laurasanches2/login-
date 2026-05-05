@@ -4,12 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="QuamdoJanelaAbrir">
     <Grid Background="#264ECA">
         <StackPanel Width="400" HorizontalAlignment="Left">
             <TextBlock FontSize="20" Text="selecione a estudante:" />
             <TextBox Height="30" x:Name="tbEstudanteNome" />
             <Button Content="Buscar imagem" Click="BotaoBuscarImagem" />
+            
+            <TextBlock Text="contagem regressiva: 30s" x:Name="Displaytemporizador"/>
 
             <StackPanel Width="400" HorizontalAlignment="Right" />
             <Image x:Name="imagemAluna" />
