@@ -1,0 +1,18 @@
+﻿<Window x:Class="Login.Painel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background="#264ECA">
+        <StackPanel Width="400" HorizontalAlignment="Left">
+            <TextBlock FontSize="20" Text="selecione a estudante:" />
+            <TextBox Height="30" x:Name="tbEstudanteNome" />
+            <Button Content="Buscar imagem" Click="BotaoBuscarImagem" />
+
+            <StackPanel Width="400" HorizontalAlignment="Right" />
+            <Image x:Name="imagemAluna" />
+        </StackPanel>
+    </Grid>
+</Window>
